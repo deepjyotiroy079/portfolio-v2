@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./includes/header') %>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/contact.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header id="header" class="header-tops">
+      <div class="container">
+        <nav class="nav-menu d-none d-lg-block">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/resume">Resume</a></li>
+            <!-- <li><a href="#portfolio">Portfolio</a></li> -->
+            <li class="active"><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+        <!-- .nav-menu -->
+      </div>
+    </header>
+    <section id="contact" class="contact section-show">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Contact Me</p>
+        </div>
+
+        <div class="row mt-2">
+          <div class="col-md-6 d-flex align-items-stretch">
+            <div class="info-box">
+              <i class="bx bx-map"></i>
+              <h3>My Address</h3>
+              <p>Jabalpur, Madhya Pradesh - 482005</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
+            <div class="info-box">
+              <i class="bx bx-share-alt"></i>
+              <h3>Social Profiles</h3>
+              <div class="social-links">
+                <a href="https://twitter.com/de_coder_079" target="_blank" class="twitter"><i class="icofont-twitter"></i></a>
+                <a href="https://www.facebook.com/deepjyoti.roy.169" target="_blank" class="facebook"><i class="icofont-facebook"></i></a>
+                <a href="https://www.instagram.com/de_coder_079/" target="_blank class="instagram"><i class="icofont-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/deepjyoti-roy-079/" target="_blank" class="linkedin"><i class="icofont-linkedin"></i></a>
+                <a href="https://github.com/deepjyotiroy079" target="_blank" class="github"><i class="icofont-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mt-4 d-flex align-items-stretch">
+            <div class="info-box">
+              <i class="bx bx-envelope"></i>
+              <h3>Email Me</h3>
+              <p>deepjyotiroy079@gmail.com</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 d-flex align-items-stretch">
+            <div class="info-box">
+              <i class="bx bx-phone-call"></i>
+              <h3>Call Me</h3>
+              <p>+91 (626) 462-7502</p>
+            </div>
+          </div>
+        </div>
+
+        <form
+          action="/contact/send"
+          method="post"
+          role="form"
+          class="php-email-form mt-4"
+        >
+          <div class="form-row">
+            <div class="col-md-6 form-group">
+              <input
+                type="text"
+                name="name"
+                class="form-control"
+                id="name"
+                placeholder="Your Name"
+                data-rule="minlen:4"
+                data-msg="Please enter at least 4 chars"
+              />
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-6 form-group">
+              <input
+                type="email"
+                class="form-control"
+                name="email"
+                id="email"
+                placeholder="Your Email"
+                data-rule="email"
+                data-msg="Please enter a valid email"
+              />
+              <div class="validate"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              name="subject"
+              id="subject"
+              placeholder="Subject"
+              data-rule="minlen:4"
+              data-msg="Please enter at least 8 chars of subject"
+            />
+            <div class="validate"></div>
+          </div>
+          <div class="form-group">
+            <textarea
+              class="form-control"
+              name="message"
+              rows="5"
+              data-rule="required"
+              data-msg="Please write something for us"
+              placeholder="Message"
+            ></textarea>
+            <div class="validate"></div>
+          </div>
+          <div class="mb-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">
+              Your message has been sent. Thank you!
+            </div>
+          </div>
+          <div class="text-center">
+            <button type="submit">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- End Contact Section -->
+    <%- include('./includes/footer') %>
+  </body>
+</html>
